@@ -1,0 +1,114 @@
+#header {
+    font-family: 'GroteskDemi';
+    background-color: $black;
+    display: flex;
+    font-size: 15px;
+    @include media('<desktop') {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: inline-block;
+        padding: 24px 30px 22px;
+        border-right: 1px solid $dark;
+        border-bottom: 1px solid $dark;
+        opacity: 1;
+        width: 274px;
+        flex-shrink: 0;
+        @include media('<widescreen') {
+            width: 213px;
+            padding: 28px 30px 22px;
+        }
+        @include media('<tablet') {
+            padding: 17px 30px;
+        }
+        @include animate(opacity);
+        &:hover {
+            opacity: 0.8;
+        }
+        img {
+            vertical-align: top;
+        }
+    }
+    .menu {
+        padding: 30px 30px 28px;
+        @include animate(transform opacity);
+        @include media('<desktop') {
+            transform: translateX(-100%);
+            opacity: 0;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 74px;
+            background-color: $white;
+        }
+        @include media('<tablet') {
+            top: 58px;
+        }
+        .menu-list {
+            display: flex;
+            @extend %listreset;
+            @include media('<widescreen') {
+                font-size: 14px;
+            }
+            @include media('<desktop') {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            li {
+                padding-right: 20px;
+                @include media('<widescreen') {
+                    padding-right: 17px;
+                }
+                @include media('<desktop') {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                @include animate(color);
+                &:hover {
+                    color: $red;
+                }
+                @include media('<desktop') {
+                    width: 100%;
+                    color: $black;
+                }
+            }
+        }
+    }
+    .menu-opener {
+        display: none;
+        cursor: pointer;
+        width: 30px;
+        border-top: 3px solid $white;
+        border-bottom: 3px solid $white;
+        margin-right: 30px;
+        span {
+            margin: 7px 0;
+            font-size: 0;
+            text-indent: -9999px;
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+            display: block;
+        }
+        @include media('<desktop') {
+            display: block;
+        }
+    }
+    .nav-active & .menu {
+        @include media('<desktop') {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.nav-active {
+    position: fixed;
+    overflow: hidden;
+}
