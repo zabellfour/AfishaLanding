@@ -65,6 +65,8 @@
   "dependencies": {
     "include-media": "^1.4.9",
     "jquery": "^3.3.1",
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^5.0.0",
+    "owl.carousel": "^2.3.3",
+    "smooth-scroll": "^12.1.5"
   }
 }

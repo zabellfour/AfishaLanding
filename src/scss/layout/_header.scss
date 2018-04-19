@@ -3,6 +3,7 @@
     background-color: $black;
     display: flex;
     font-size: 15px;
+    border-bottom: 1px solid #333;
     @include media('<desktop') {
         justify-content: space-between;
         align-items: center;
@@ -11,7 +12,6 @@
         display: inline-block;
         padding: 24px 30px 22px;
         border-right: 1px solid $dark;
-        border-bottom: 1px solid $dark;
         opacity: 1;
         width: 274px;
         flex-shrink: 0;
@@ -31,8 +31,10 @@
         }
     }
     .menu {
+        z-index: 100;
         padding: 30px 30px 28px;
         @include animate(transform opacity);
+        width: 100%;
         @include media('<desktop') {
             transform: translateX(-100%);
             opacity: 0;
@@ -40,11 +42,23 @@
             left: 0;
             right: 0;
             bottom: 0;
-            top: 74px;
+            top: 0;
             background-color: $white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow: auto;
         }
         @include media('<tablet') {
-            top: 58px;
+            top: 0;
+        }
+        .menu-close {
+            display: none;
+            font-size: 22px;
+            @include media('<desktop') {
+                display: block;
+            }
         }
         .menu-list {
             display: flex;
@@ -55,6 +69,11 @@
             @include media('<desktop') {
                 flex-wrap: wrap;
                 text-align: center;
+                width: 100%;
+                align-self: flex-start;
+                @include media('<desktop') {
+                    font-size: 17px;
+                }
             }
             li {
                 padding-right: 20px;
@@ -63,13 +82,17 @@
                 }
                 @include media('<desktop') {
                     width: 100%;
-                    margin-bottom: 15px;
+                    margin: 0;
+                    padding: 0;
                 }
             }
             a {
                 color: $white;
                 text-decoration: none;
                 @include animate(color);
+                @include media('<desktop') {
+                    line-height: 40px;
+                }
                 &:hover {
                     color: $red;
                 }

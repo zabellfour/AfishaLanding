@@ -1,0 +1,104 @@
+.event-section {
+    .bg-black {
+        background: black;
+    }
+    .section-image {
+        img {
+            width: 100%;
+            max-height: 982px;
+            object-fit: cover;
+        }
+    }
+    .container {
+        background-color: $white;
+        position: relative;
+    }
+    .event-info {
+        margin-top: -331px;
+        padding: 90px 250px 90px 261px;
+        .text-holder {
+            margin-bottom: 80px;
+        }
+        .number {
+            font-size: 79px;
+            font-family: Montserrat;
+            font-weight: 400;
+            position: absolute;
+            left: 107px;
+            top: 85px;
+            letter-spacing: 8px;
+        }
+        time {
+            color: $red;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 11px;
+            font-family: 'Helvetica Neue LT CYR';
+            font-weight: 500;
+            display: block;
+            padding-top: 4px;
+            letter-spacing: 0.5px;
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .h1 {
+            font-size: 44px;
+            padding-bottom: 42px;
+            position: relative;
+            margin-bottom: 49px;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 21%;
+                height: 3px;
+                background-color: $black;
+            }
+        }
+    }
+    .decorate-text {
+        position: absolute;
+        transform: rotate(-90deg);
+        transform-origin: 0 50%;
+        font-weight: 500;
+        font-size: 103px;
+        color: $white;
+        opacity: .72;
+        text-transform: uppercase;
+        font-weight: 500;
+        left: 20px;
+        top: 203px;
+        line-height: 0.9;
+        span {
+            display: block;
+            padding-left: 326px;
+        }
+    }
+}
+
+.events-slider {
+    position: relative;
+    .slide-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        max-width: 1182px;
+        margin: 0 auto;
+        background-color: $white;
+        z-index: -1;
+    }
+    .img-holder {
+        background-color: $black;
+        padding: 60px;
+    }
+}
