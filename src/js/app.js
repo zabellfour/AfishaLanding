@@ -15,30 +15,49 @@
                 $body.toggleClass('nav-active');
             });
         }
-        var scroll = new SmoothScroll('[data-scroll]');
         mobNav('.menu-opener', '.menu-close');
-        $(".events-slider").owlCarousel({
-            margin: 120,
+
+        var scroll = new SmoothScroll('[data-scroll]');
+        
+        $(".bottom-slider").owlCarousel({
+ 
             items: 1,
-            stagePadding: 500,
+    
+            nav:true,
+            dots:true,
             loop: true,
+            center: true,
+        });
+        $(".events-slider").owlCarousel({
+            margin: 130,
+            items: 1,
+            stagePadding: 480,
+            nav:true,
+            dots:false,
+            loop: true,
+            center: true,
             responsive: {
                 0: {
                     items: 1,
-                    stagePadding: 150,
+                    stagePadding: 80,
+                    margin: 15
+                },
+                768: {
+                    items: 1,
+                    stagePadding: 160,
                     margin: 30
                 },
                 1024: {
-                    stagePadding: 250,
-                    margin: 60
+                    stagePadding: 270,
+                    margin: 40
                 },
-                1200: {
-                    stagePadding: 400,
+                1370: {
+                    stagePadding: 370,
                     margin: 120
                 },
                 1500: {
-                    margin: 120,
-                    stagePadding: 500
+                    margin:130,
+                    stagePadding:480
                 }
             }
         });

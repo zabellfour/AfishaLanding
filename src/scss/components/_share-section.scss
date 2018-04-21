@@ -1,0 +1,127 @@
+.share-section{
+  color:$white;
+
+  .container{
+    max-width: 690px;
+      padding:89px 15px 121px;
+      font-size: 20px;
+      line-height: 1.5;
+      @include media('<widescreen') {
+        padding:60px 15px;
+      }
+      @include media('<desktop') {
+        padding: 40px 5%;
+      }
+      a{
+        color: $red;
+      }
+      p{
+        margin-bottom: 30px;
+        @include media('<widescreen') {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        @include media('<desktop') {
+          font-size: 16px;
+          margin-bottom: 10px;
+
+        }
+        letter-spacing: -0.5px;
+      }
+  }
+  hr{
+    margin:74px 0 54px;
+    height: 5px;
+    background-color: $red;
+    border:none;
+    @include media('<widescreen') {
+      margin:40px 0;
+    }
+    @include media('<desktop') {
+      margin: 20px 0;
+    }
+  }
+  .h2{
+    font-size: 45px;font-weight: 300;
+    margin-bottom: 21px;
+    @include media('<widescreen') {
+      font-size: 40px;
+    }
+    @include media('<desktop') {
+      font-size: 30px;
+    }
+    @include media('<tablet') {
+      font-size: 24px;
+    }
+ 
+  }
+  .marked{
+    color:$red;
+  }
+}
+.share-list{
+  color:$white;
+  font-size: 16px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 44px;
+  @extend %listreset;
+  display: flex;
+  @include media('<tablet') {
+    margin-top: 20px;
+  }
+  @include media('<phone') {
+    flex-wrap: wrap;
+    line-height: 40px;
+  }
+  .text{
+    text-transform: uppercase;
+    font-size: 13px;
+    min-width: 227px;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media('<tablet') {
+      min-width: 200px;
+      font-size: 11px;
+      padding: 0 5px ;
+    }
+    @include media('<phone') {
+      width: 100%;
+    }
+    i{
+      font-size: 20px;
+      padding-right: 10px;
+    }
+  }
+  .text + .social a{
+    border-left:none !important  ;
+    @include media('<phone') {
+      border-left:1px solid rgba($white,.7) !important ;
+    }
+  }
+  .social{
+    width:100%;
+    flex-shrink: 1;
+    @include media('<phone') {
+      width: 25%;
+    }
+    a{
+      color:$white;
+      display: block;
+      text-decoration: none;
+      border:1px solid rgba($white,.7);
+      border-right:none;
+      @include animate(background-color color);
+      &:hover{
+        color:$black;
+        background-color: $white;
+      }
+    }
+    &:last-child a{
+      border:1px solid rgba($white,.7);
+    }
+  }
+  
+}

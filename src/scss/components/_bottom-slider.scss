@@ -1,0 +1,228 @@
+.bottom-slider-section {
+    margin-bottom: 143px;
+    color:$white;
+    @include media('<widescreen') {
+      padding: 0 40px;
+      margin-bottom: 100px;
+    }
+    @include media('<desktop') {
+      padding: 0 15px;
+      margin-bottom: 50px;
+    }
+    @include media('<tablet') {
+      margin-bottom: 30px;
+    }
+    .text-holder{
+
+    }
+    .owl-nav {
+        margin: 0;
+        .owl-prev{
+          @include media('<desktop') {
+            text-indent: -3px;
+          }
+        }
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            left:-30px;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            border: 3px solid $red !important;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px !important;
+            text-decoration: none;
+            opacity: 1;
+            @include animate(opacity);
+            line-height: 55px;
+            outline: none;
+            margin: 0;
+         @include media('<desktop') {
+           left: 15px;
+           width: 40px;
+           height: 40px;
+           border: 2px solid $red !important;
+         }
+         @include media('<phone') {
+           bottom:19vw;
+           top:auto;
+         }
+            &:hover {
+                background-color: transparent;
+            }
+            &:after {
+                font-family: 'icomoon';
+                font-size: inherit;
+                content: "\e907";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 100;
+                @include media('<desktop') {
+                    max-width: 90%;
+                }
+            }
+            span {
+                display: none;
+            }
+            &:hover {
+                opacity: .8;
+            }
+        
+        }
+        .owl-next {
+            left: auto;
+            right:-30px !important;
+           @include media('<desktop') {
+             left:auto;
+             right: 15px !important;
+           }
+            &:after {
+                font-family: 'icomoon';
+                font-size: inherit;
+                content: "\e906";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-weight: 100;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        @include media('<widescreen') {
+          bottom: 15px;
+        }
+        @include media('<tablet') {
+          bottom: 0px;
+        }
+        .owl-dot {
+            &.active {
+                span {
+                    background-color: $red;
+                    opacity: .8;
+                }
+            }
+            span {
+                height: 2px;
+                width: 40px;
+                display: inline-block;
+                background-color: $white;
+                opacity: .25;
+            }
+        }
+    }
+    .slide-holder {
+        text-align: center;
+        position: relative;
+        color: $white;
+        font-size: 22px;
+        font-weight: 400;
+        @include media('<desktop') {
+          font-size: 18px;
+        }
+        .h1 {
+            font-weight: 400;
+            font-size: 67px;
+            margin-bottom: 2px;
+            @include media('<widescreen') {
+              font-size: 40px;
+            }
+            @include media('<desktop') {
+              font-size: 30px;
+            }
+            @include media('<tablet') {
+              font-size: 24px;
+            }
+        }
+    }
+    .btn-borderer {
+        font-size: 13px;
+        min-width: 188px;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 15px 10px;
+        border: 1px solid $white;
+        opacity: 1;
+        @include animate(opacity);
+        @include media('<desktop') {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 12px;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        @include media('<widescreen') {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        @include media('<desktop') {
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+    }
+    .img-holder {
+        width: 100%;
+        position: relative;
+    }
+    .text-holder {
+        padding: 57px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99 ;
+        right: 0;
+        text-align: center;
+        @include media('<widescreen') {
+          padding:40px;
+        }
+        @include media('<desktop') {
+          padding-top: 20px;
+        }
+        @include media('<tablet') {
+          padding-top: 0;
+        }
+        @include media('<phone') {
+          position: static;
+        }
+    }
+    .slider-logo-holder {
+        position: absolute;
+        right: 29px;
+        top: 31px;
+        width: 173px;
+        @include media('<desktop') {
+          width:100px;
+          right: 10px;
+          top:10px;
+        }
+        @include media('<phone') {
+       top:50%;
+       left:50%;
+       transform:translateX(-50%)
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+ 
+}
