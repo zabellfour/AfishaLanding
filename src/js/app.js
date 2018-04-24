@@ -3,6 +3,16 @@
 
     // When DOM is ready
     $(() => {
+        var wow = new WOW(
+            {
+              boxClass:     'wow',   
+              animateClass: 'animated', 
+              mobile:       false,     
+              live:         true,     
+              scrollContainer: null 
+            }
+          );
+          wow.init();
         //mob Nav
         function mobNav(opener, close) {
             let $opener = $(opener);

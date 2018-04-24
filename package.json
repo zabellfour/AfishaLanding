@@ -67,6 +67,7 @@
     "jquery": "^3.3.1",
     "normalize.css": "^5.0.0",
     "owl.carousel": "^2.3.3",
-    "smooth-scroll": "^12.1.5"
+    "smooth-scroll": "^12.1.5",
+    "wowjs": "^1.1.3"
   }
 }

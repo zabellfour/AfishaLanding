@@ -58,6 +58,8 @@
             font-size: 22px;
             @include media('<desktop') {
                 display: block;
+                opacity: 0;
+
             }
         }
         .menu-list {
@@ -81,9 +83,11 @@
                     padding-right: 17px;
                 }
                 @include media('<desktop') {
-                    width: 100%;
-                    margin: 0;
+                    width: 90%;
+                    margin: 0 auto;
+                    overflow: hidden;
                     padding: 0;
+           
                 }
             }
             a {
@@ -99,6 +103,11 @@
                 @include media('<desktop') {
                     width: 100%;
                     color: $black;
+                    transform: translateX(-100%);
+                    display: block;
+                    opacity: 0;
+                    transition:transform 0.55s ease-in-out, opacity 1s ;
+                    
                 }
             }
         }
@@ -134,4 +143,37 @@
 .nav-active {
     position: fixed;
     overflow: hidden;
+    #header {
+        .menu {
+            .menu-close {}
+            .menu-list {
+                li {
+                    @include media('<desktop') {
+                        @for $i from 1 through 20 {
+                   
+                            &:nth-child(#{$i}) a {
+                                transition-delay:#{$i*0.12}s;
+                            }
+                    
+                    }
+                    }
+                }
+                a {
+                    opacity: 1;
+                    transform: translateX(0);
+
+                }
+            }
+        }
+        .menu-close {
+ 
+            @include media('<desktop') {
+                transform:translateX(-100%);
+                @include animate(transform opacity);
+                transition-delay: 1.5s;
+                opacity: 1;
+                transform:translateX(0);
+            }
+        }
+    }
 }

@@ -247,6 +247,7 @@
         margin: 0 auto;
         background-color: $white;
         z-index: -1;
+        width: 100%;
         @include media('<1320px') {
             max-width: 1000px;
             
