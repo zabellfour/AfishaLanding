@@ -14,6 +14,11 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        .wow.fadeIn{
+            @include media('<tablet') {
+                margin-left: auto;
+            }
+        }
         @include media('<widescreen') {
             font-size: 18px;
             padding: 25px;
@@ -25,7 +30,7 @@
             min-height: calc(100vh - 58px);
             display: flex;
             flex-wrap: wrap;
-            padding: 15px 15px;
+            padding: 32px 15px;
             font-size: 14px;
         }
         .subtitle {
@@ -36,7 +41,8 @@
             opacity: 0.4;
             letter-spacing: 0.5px;
             @include media('<tablet') {
-                margin-bottom: 5px;
+                margin-bottom: 0px;
+                font-size: 10px;
             }
         }
         .h1 {
@@ -57,9 +63,9 @@
                 padding-bottom: 20px;
             }
             @include media('<tablet') {
-                margin-bottom: 15px;
-                font-size: 30px;
-                padding-bottom: 10px;
+                margin-bottom: 13px;
+                font-size: 24px;
+                padding-bottom: 6px;
             }
             &:after {
                 content: '';
@@ -82,6 +88,9 @@
                 }
                 @include media('<phone') {
                     padding: 0 0px 10px 0;
+                    line-height: 1.25;
+                    margin-bottom: 2px;
+                    font-weight: 400;
                 }
             }
             .scroll-down {
@@ -104,6 +113,14 @@
                 @include media('<desktop') {
                     margin-left: 0;
                 }
+                @include media('<phone') {
+                    width: 30px;height: 30px;
+                    font-size: 24px;
+                    border-width: 2px;
+                    i{
+                    transform: translateY(2px)
+                    }
+                }
             }
         }
     }
@@ -119,16 +136,21 @@
         overflow: hidden;
         @include media('<tablet') {
             position: static;
-            width: 100%;
-            margin: 10px 0;
+            width:180px;
+            margin: 42px 0 10px auto;
+            border-width: 2px;
+            float: right;
+            padding:2px 9px;
+             
         }
         @include media('<phone') {
-            padding: 15px;
+
         }
         p {
             margin-bottom: -5px;
             @include media('<tablet') {
                 margin-bottom: 5px;
+                font-size: 10px;
             }
         }
         .title {
@@ -136,6 +158,9 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 400;
+            @include media('<tablet') {
+                font-size: 18px;
+            }
         }
         a {
             font-size: 13px;
@@ -144,6 +169,9 @@
             text-decoration: none;
             opacity: 1;
             @include animate(opacity);
+            @include media('<tablet') {
+                font-size: 9px;
+            }
             &:hover {
                 opacity: .8;
             }

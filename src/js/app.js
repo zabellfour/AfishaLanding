@@ -49,16 +49,27 @@
             responsive: {
                 0: {
                     items: 1,
-                    stagePadding: 80,
-                    margin: 15
+                    stagePadding: 40,
+                    margin:10,
+                    mouseDrag: false,
+                    touchDrag: true
+                },
+                480: {
+                    items: 1,
+                    stagePadding: 100,
+                    margin: 25,
+                    mouseDrag: false,
+                    touchDrag: true
                 },
                 768: {
                     items: 1,
-                    stagePadding: 160,
-                    margin: 30
+                    stagePadding: 140,
+                    margin: 30,
+                    mouseDrag: false,
+                    touchDrag: true
                 },
                 1024: {
-                    stagePadding: 270,
+                    stagePadding: 240,
                     margin: 40
                 },
                 1370: {
@@ -67,7 +78,7 @@
                 },
                 1500: {
                     margin:130,
-                    stagePadding:480
+                    stagePadding:400
                 }
             }
         });

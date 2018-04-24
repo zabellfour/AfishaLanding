@@ -12,6 +12,9 @@
       @include media('<desktop') {
         padding: 40px 5%;
       }
+      @include media('<tablet') {
+        padding:25px 5%;
+      }
       a{
         color: $red;
       }
@@ -25,6 +28,10 @@
           font-size: 16px;
           margin-bottom: 10px;
 
+        }
+        @include media('<tablet') {
+          font-size: 14px;
+          line-height: 1.3;
         }
         letter-spacing: -0.5px;
       }
@@ -71,7 +78,7 @@
     margin-top: 20px;
   }
   @include media('<phone') {
-    flex-wrap: wrap;
+
     line-height: 40px;
   }
   .text{
@@ -82,17 +89,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    span{
+      @include media('<tablet') {
+        
+        display: none;
+      }
+    }
     @include media('<tablet') {
       min-width: 200px;
       font-size: 11px;
       padding: 0 5px ;
     }
     @include media('<phone') {
-      width: 100%;
+      min-width: 75px;
     }
     i{
       font-size: 20px;
       padding-right: 10px;
+     @include media('<tablet') {
+padding-right: 0;
+     }
     }
   }
   .text + .social a{

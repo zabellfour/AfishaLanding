@@ -8,6 +8,9 @@
             max-height: 982px;
             min-height: 370px;
             object-fit: cover;
+            @include media('<tablet') {
+                min-height: 437px;
+            }
         }
     }
     .container {
@@ -22,6 +25,11 @@
         }
         @include media('<desktop') {
             max-width: 90%;
+        }
+        @include media('<tablet') {
+            margin-left: 10px;
+            margin-right: 10px;
+            max-width: 100%;
         }
     }
     .event-info {
@@ -40,7 +48,7 @@
         
         }
         @include media('<tablet') {
-            padding:10px 15px 20px;
+            padding:10px 15px 16px;
         }
         .text-holder {
             margin-bottom: 70px;
@@ -71,10 +79,13 @@
                 letter-spacing: 0px;
             }
             @include media('<tablet') {
-                right: 7px;
-                top: 0px;
-                letter-spacing: 0px;
-                left: auto;
+            
+              
+         font-size: 42px;
+              
+                top: 6px;
+                letter-spacing: 5px;
+                left: 10px;
             }
         }
         time {
@@ -87,7 +98,11 @@
             display: block;
             padding-top: 4px;
             letter-spacing: 0.5px;
-       
+            @include media('<tablet') {
+                padding-left: 63px;
+                font-size: 10px;
+                margin-bottom: 6px;
+            }
         }
         p {
             line-height: 1.5;
@@ -101,7 +116,7 @@
             }
             @include media('<tablet') {
                 font-size: 14px;
-                text-align: justify;
+                line-height: 1.25;
             }
         }
         .h1 {
@@ -122,6 +137,11 @@
             }
             @include media('<tablet') {
                 font-size: 22px;
+               margin-left: 63px;;
+               line-height: 1.5;
+               padding-bottom: 3px;
+               letter-spacing: 0;
+               margin-bottom: 24px;
             }
             &:after {
                 content: '';
@@ -157,18 +177,15 @@
             font-size: 60px;
         }
         @include media('<desktop') {
-            transform: rotate(0);
-            top:-250px;
-            left: 15px;
-            right:15px;
-            text-align: center;
-            font-size: 50px;
-            letter-spacing: 0;
-            line-height: 1.4;
+            font-size: 40px;
+            left: 34px;
+            top: -39px;
         }
         @include media('<tablet') {
-            font-size: 40px;
-            top:-180px;
+            font-size: 25px;
+            top:-38px;
+            left:28px;
+            letter-spacing: 0;
         }
         span {
             display: block;
@@ -177,6 +194,10 @@
                 
                 padding: 0;
             }
+            @include media('<tablet') {
+                padding-left: 83px;
+            }
+
         }
     }
     .descr-section{
@@ -192,12 +213,16 @@
             padding:50px 15px;
         }@include media('<tablet') {
          font-size: 14px;   
-         padding-bottom:60px;
+         padding:60px 0 80px;
+
         }
         p{
             margin-bottom: 0;
             position: relative;
             line-height: 1.2;
+           @include media('<tablet') {
+               font-size: 17px;
+           }
             &:before{
                 content: '«';
                 font-family: 'Montserrat';
@@ -209,6 +234,10 @@
                 line-height: 1;
                 @include media('<desktop') {
                     top:-60px;
+                }
+                @include media('<tablet') {
+                    font-size: 36px;
+                    top:-48px;
                 }
             }
             &:after{
@@ -223,6 +252,11 @@
                 @include media('<desktop') {
                    top: 70%;
                 }
+                @include media('<tablet') {
+                    font-size: 36px;
+                    bottom: -26px;
+    top: auto;
+                }
             }
         }
         
@@ -231,7 +265,6 @@
 
 .events-slider {
     position: relative;
-
     .slide-wrapper {
         max-width: 700px;
         margin: 0 auto;
@@ -270,11 +303,13 @@
             margin-bottom: 10px;
         }
         @include media('<tablet') {
-            padding:30px;
-            margin-bottom: 5px;
-        }@include media('<phone') {
-            padding: 15px;
+            padding: 18px 23px;
+            margin-bottom: 15px;
         }
+    }
+    .additional-info{
+        opacity:0;
+        @include animate(opacity);
     }
     .img-caption{
      text-align: right;
@@ -300,7 +335,7 @@
          font-size: 10px;
      }
     }
-    .active.owl-item .img-caption{
+    .active.owl-item .img-caption,   .active.owl-item .additional-info{
         opacity: 1;
     }
     .owl-nav{
@@ -312,7 +347,7 @@
         }
         .owl-prev,.owl-next{
             position: absolute;
-            top:50%;
+            top:32%;
             left:144px;
             transform:translateY(-50%);
             width: 55px;
@@ -334,10 +369,14 @@
                 left:100px ;
             }
             @include media('<tablet') {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 border:2px solid $red !important    ;
                 font-size: 25px;
+                left:2px ;
+            }
+            @include media('<phone') {
+                top:26%;
             }
         
            
@@ -356,6 +395,9 @@
                 @include media('<desktop') {
                     max-width: 90%;
                 }
+                @include media('<tablet') {
+                    font-size: 26px;
+                }
             }
             span{
                 display: none;
@@ -368,7 +410,7 @@
                 left:50px;
             }
             @include media('<tablet') {
-                left:10px;
+                left:2px;
             }
         }
         .owl-next{
@@ -386,7 +428,7 @@
             }
             @include media('<tablet') {
                 left:auto !important;
-                right:10px !important; 
+                right:2px !important; 
             }
             &:after{
                 font-family: 'icomoon';
@@ -396,6 +438,9 @@
                 top:50%;
                 left:50%; font-weight: 100;
                 transform:translate(-50%,-50%);
+                @include media('<tablet') {
+                    font-size: 26px;
+                }
             }
         }
     }

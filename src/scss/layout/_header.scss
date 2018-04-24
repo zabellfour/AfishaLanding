@@ -20,7 +20,7 @@
             padding: 28px 30px 22px;
         }
         @include media('<tablet') {
-            padding: 17px 30px;
+            padding: 12px 20px 14px 17px;
         }
         @include animate(opacity);
         &:hover {
@@ -115,21 +115,22 @@
     .menu-opener {
         display: none;
         cursor: pointer;
-        width: 30px;
-        border-top: 3px solid $white;
-        border-bottom: 3px solid $white;
-        margin-right: 30px;
+        width: 22px;
+        border-top: 2px solid $white;
+        border-bottom: 2px solid $white;
+        margin-right: 15px;
         span {
-            margin: 7px 0;
+            margin: 5px 0;
             font-size: 0;
             text-indent: -9999px;
             width: 100%;
-            height: 3px;
+            height: 2px;
             background-color: $white;
             display: block;
         }
         @include media('<desktop') {
             display: block;
+
         }
     }
     .nav-active & .menu {
