@@ -134,6 +134,7 @@
         font-size: 14px;
         color: $white;
         overflow: hidden;
+        display: none;
         @include media('<tablet') {
             position: static;
             width:180px;

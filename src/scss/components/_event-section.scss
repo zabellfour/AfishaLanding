@@ -18,7 +18,6 @@
         position: relative;
         @include media('<1320px') {
             max-width: 1000px;
-            
         }
         @include media('<widescreen') {
             max-width: 920px;
@@ -36,19 +35,18 @@
         margin-top: -331px;
         padding: 90px 250px 10px 261px;
         @include media('<1400px') {
-            padding:80px 200px 80px;
+            padding: 80px 200px 80px;
         }
         @include media('<widescreen') {
             margin-top: -300px;
-            padding: 60px 150px 30px ;
+            padding: 60px 150px 30px;
         }
         @include media('<desktop') {
             margin-top: -150px;
             padding: 30px 50px 20px 70px;
-        
         }
         @include media('<tablet') {
-            padding:10px 15px 16px;
+            padding: 10px 25px 16px;
         }
         .text-holder {
             margin-bottom: 70px;
@@ -68,22 +66,21 @@
             top: 85px;
             letter-spacing: 8px;
             @include media('<1400px') {
-                left:50px;
+                left: 50px;
+            }
+            @include media('<widescreen') {
+                left:27px;
+                top:68px;
             }
             @include media('<desktop') {
                 font-size: 35px;
-          
-               
                 left: 7px;
                 top: 61px;
                 letter-spacing: 0px;
             }
             @include media('<tablet') {
-            
-              
-         font-size: 42px;
-              
-                top: 6px;
+                font-size: 42px;
+                top: 26px;
                 letter-spacing: 5px;
                 left: 10px;
             }
@@ -106,17 +103,19 @@
         }
         p {
             line-height: 1.5;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
             @include media('<widescreen') {
                 line-height: 1.3;
                 font-size: 17px;
             }
             @include media('<desktop') {
                 font-size: 15px;
+                margin-bottom: 20px;
             }
             @include media('<tablet') {
                 font-size: 14px;
                 line-height: 1.25;
+                margin-bottom: 10px;
             }
         }
         .h1 {
@@ -137,11 +136,12 @@
             }
             @include media('<tablet') {
                 font-size: 22px;
-               margin-left: 63px;;
-               line-height: 1.5;
-               padding-bottom: 3px;
-               letter-spacing: 0;
-               margin-bottom: 24px;
+                margin-left: 63px;
+                ;
+                line-height: 1.5;
+                padding-bottom: 3px;
+                letter-spacing: 0;
+                margin-bottom: 24px;
             }
             &:after {
                 content: '';
@@ -164,14 +164,14 @@
         opacity: .72;
         text-transform: uppercase;
         font-weight: 500;
-        left: 20px;
+        left: 13px;
         top: 203px;
         line-height: 0.9;
         @include media('<1400px') {
-                font-size: 80px;
-                left:10px;
-                top:265px;
-                letter-spacing: -2px;
+            font-size: 80px;
+            left: 10px;
+            top: 265px;
+            letter-spacing: -2px;
         }
         @include media('<widescreen') {
             font-size: 60px;
@@ -183,24 +183,94 @@
         }
         @include media('<tablet') {
             font-size: 25px;
-            top:-38px;
-            left:28px;
+            top: -38px;
+            left: 28px;
             letter-spacing: 0;
+        }
+        .size-sm {
+            font-size: 60px;
+            max-width: 900px;
+            padding-left: 100px;
+        @include media('<widescreen') {
+            font-size: 40px;
+        }
+            @include media('<desktop') {
+                font-size: 30px;
+                padding-left: 0;
+            }
+            @include media('<tablet') {
+                font-size: 25px;
+                max-width: 280px;
+                transform: translate(10px, 15px);
+            }
+        }
+        .size-md {
+            font-size: 60px;
+            max-width: 900px;
+            padding-left: 100px;
+            @include media('<1400px') {
+                padding-left: 220px;
+            }
+         
+            @include media('<desktop') {
+                padding-left: 0px;
+                font-size: 40px;
+            }
+            @include media('<tablet') {
+                font-size: 25px;
+            }
         }
         span {
             display: block;
             padding-left: 326px;
+            &.size-md {
+                padding-left: 300px;
+                font-size: 72px;
+                line-height: 1;
+                @include media('>desktop') {
+                    line-height: 100px;
+                }
+                @include media('<1400px') {
+                    font-size: 60px;
+                    padding-left: 350px;
+                }
+                @include media('<desktop') {
+                    padding-left: 0px;
+                    font-size: 40px;
+                }
+                @include media('<tablet') {
+                    font-size: 25px;
+                }
+            }
+            &.size-sm {
+                font-size: 60px;
+                max-width: 900px;
+                padding-left: 325px;
+                @include media('<1400px') {
+                    padding-left: 345px;
+                }
+                @include media('<widescreen') {
+                    padding-left: 320px;
+                    font-size:40px;
+                    max-width: 650px;                }
+                @include media('<desktop') {
+                    padding-left: 0;
+                    font-size: 30px;
+                    max-width: 330px;
+                }
+                @include media('<tablet') {
+                    font-size: 25px;
+                }
+            }
             @include media('<desktop') {
-                
                 padding: 0;
             }
             @include media('<tablet') {
                 padding-left: 83px;
             }
-
         }
     }
-    .descr-section{
+    .descr-section {
         padding-top: 104px;
         max-width: 554px;
         margin: 0 auto;
@@ -210,64 +280,73 @@
         padding-bottom: 158px;
         @include media('<desktop') {
             font-size: 18px;
-            padding:50px 15px;
-        }@include media('<tablet') {
-         font-size: 14px;   
-         padding:60px 0 80px;
-
+            padding: 50px 15px;
         }
-        p{
+        @include media('<tablet') {
+            font-size: 14px;
+            padding: 60px 0 80px;
+        }
+        p {
             margin-bottom: 0;
             position: relative;
             line-height: 1.2;
-           @include media('<tablet') {
-               font-size: 17px;
-           }
-            &:before{
+            @include media('<tablet') {
+                font-size: 17px;
+            }
+            &:before {
                 content: '«';
                 font-family: 'Montserrat';
                 position: absolute;
-                top:-88px;
-                left:0;
+                top: -88px;
+                left: 0;
                 font-size: 69px;
-                color:$red;
+                color: $red;
                 line-height: 1;
                 @include media('<desktop') {
-                    top:-60px;
+                    top: -60px;
                 }
                 @include media('<tablet') {
                     font-size: 36px;
-                    top:-48px;
+                    top: -48px;
                 }
             }
-            &:after{
+            &:after {
                 line-height: 1;
                 content: '»';
                 font-family: 'Montserrat';
                 position: absolute;
-                top:102%;
-                left:0;
+                top: 102%;
+                left: 0;
                 font-size: 69px;
-                color:$red;
+                color: $red;
                 @include media('<desktop') {
-                   top: 70%;
+                    top: 70%;
                 }
                 @include media('<tablet') {
                     font-size: 36px;
                     bottom: -26px;
-    top: auto;
+                    top: auto;
                 }
             }
         }
-        
     }
 }
 
 .events-slider {
     position: relative;
+    
     .slide-wrapper {
         max-width: 700px;
         margin: 0 auto;
+        text-align: right;
+        a{
+            display: inline-block;
+            text-align: right;
+            opacity: 1;
+            &:hover{
+                opacity: .8;
+            }
+        }
     }
     &:after {
         content: '';
@@ -283,12 +362,9 @@
         width: 100%;
         @include media('<1320px') {
             max-width: 1000px;
-            
         }
-  
         @include media('<widescreen') {
-            max-width:920px;
-            
+            max-width: 920px;
         }
         @include media('<desktop') {
             max-width: 90%;
@@ -296,10 +372,10 @@
     }
     .img-holder {
         background-color: $black;
-        padding:51px 68px 61px;
+        padding: 51px 68px 61px;
         margin-bottom: 22px;
         @include media('<desktop') {
-            padding:60px;
+            padding: 60px;
             margin-bottom: 10px;
         }
         @include media('<tablet') {
@@ -307,52 +383,55 @@
             margin-bottom: 15px;
         }
     }
-    .additional-info{
-        opacity:0;
+    .additional-info {
+        opacity: 0;
         @include animate(opacity);
+        text-align: left;
     }
-    .img-caption{
-     text-align: right;
-     color:$red;
-     font-style: italic;
-     font-size: 17px;
-     font-weight:300;
-     width: 100%;   
-     display: block;   
-     letter-spacing: -0.41px;
-     opacity: 0;
-     @include animate(opacity);
-     @include media('<widescreen') {
-         font-size: 16px;
-     }
-     @include media('<desktop') {
-         font-size: 14px;
-     }
-     @include media('<tablet') {
-         font-size: 12px;
-     }
-     @include media('<phone') {
-         font-size: 10px;
-     }
+    .img-caption {
+        text-align: right;
+        color: $red;
+        font-style: italic;
+        font-size: 17px;
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        letter-spacing: -0.41px;
+        opacity: 0;
+        @include animate(opacity);
+        @include media('<widescreen') {
+            font-size: 16px;
+        }
+        @include media('<desktop') {
+            font-size: 14px;
+        }
+        @include media('<tablet') {
+            font-size: 12px;
+        }
+        @include media('<phone') {
+            font-size: 10px;
+        }
     }
-    .active.owl-item .img-caption,   .active.owl-item .additional-info{
+    .active.owl-item .img-caption,
+    .active.owl-item .additional-info {
         opacity: 1;
     }
-    .owl-nav{
-        color:$white;
-        .owl-prev{
+    .owl-nav {
+        color: $white;
+        .owl-prev {
             @include media('<tablet') {
                 text-indent: -3px;
             }
         }
-        .owl-prev,.owl-next{
+        .owl-prev,
+        .owl-next {
             position: absolute;
-            top:32%;
-            left:144px;
-            transform:translateY(-50%);
+            top: 32%;
+            left: 144px;
+            transform: translateY(-50%);
             width: 55px;
             height: 55px;
-            border: 3px solid $red !important    ;
+            border: 3px solid $red !important;
             border-radius: 50%;
             color: $white;
             display: flex;
@@ -366,31 +445,29 @@
             outline: none;
             margin: 0;
             @include media('<widescreen') {
-                left:100px ;
+                left: 100px;
             }
             @include media('<tablet') {
                 width: 30px;
                 height: 30px;
-                border:2px solid $red !important    ;
+                border: 2px solid $red !important;
                 font-size: 25px;
-                left:2px ;
+                left: 2px;
             }
             @include media('<phone') {
-                top:26%;
+                top: 26%;
             }
-        
-           
-            &:hover{
+            &:hover {
                 background-color: transparent;
             }
-            &:after{
+            &:after {
                 font-family: 'icomoon';
-                font-size:inherit;
+                font-size: inherit;
                 content: "\e907";
                 position: absolute;
-                top:50%;
-                left:50%;
-                transform:translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 font-weight: 100;
                 @include media('<desktop') {
                     max-width: 90%;
@@ -399,7 +476,7 @@
                     font-size: 26px;
                 }
             }
-            span{
+            span {
                 display: none;
             }
             &:hover {
@@ -407,46 +484,159 @@
             }
             @include media('<desktop') {
                 margin-left: 0;
-                left:50px;
+                left: 50px;
             }
             @include media('<tablet') {
-                left:2px;
+                left: 2px;
             }
         }
-        .owl-next{
-            left:auto;
-            right:144px !important;   
-
+        .owl-next {
+            left: auto;
+            right: 144px !important;
             @include media('<widescreen') {
-                left:auto !important;
-                right:100px !important;
+                left: auto !important;
+                right: 100px !important;
             }
             @include media('<desktop') {
-                
-                left:auto !important;
-                right:50px !important;                
+                left: auto !important;
+                right: 50px !important;
             }
             @include media('<tablet') {
-                left:auto !important;
-                right:2px !important; 
+                left: auto !important;
+                right: 2px !important;
             }
-            &:after{
+            &:after {
                 font-family: 'icomoon';
                 font-size: inherit;
                 content: "\e906";
                 position: absolute;
-                top:50%;
-                left:50%; font-weight: 100;
-                transform:translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                font-weight: 100;
+                transform: translate(-50%, -50%);
                 @include media('<tablet') {
                     font-size: 26px;
                 }
             }
         }
     }
-    .owl-nav{
+    .owl-nav {
         margin: 0;
     }
-  
-    
+}
+
+.common-slider{
+    position: relative;
+    &>.owl-nav {
+        color: $white;
+        .owl-prev {
+            @include media('<tablet') {
+                text-indent: -3px;
+            }
+        }
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 1200px;
+            left: 19%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            border: 3px solid $red !important;
+            border-radius: 50%;
+            color: $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px !important;
+            text-decoration: none;
+            opacity: 1;
+            @include animate(opacity);
+            line-height: 55px;
+            outline: none;
+            margin: 0;
+            @include media('<widescreen') {
+                left: 12%;
+                top:800px;
+            }
+            @include media('<desktop') {
+                width: 30px;
+                height: 30px;
+                border: 2px solid $red !important;
+                font-size: 25px;
+                left: 55px;
+            }
+            @include media('<tablet') {
+                top:500px;
+            }
+            @include media('<phone') {
+                top: 26%;
+            }
+            &:hover {
+                background-color: transparent;
+            }
+            &:after {
+                font-family: 'icomoon';
+                font-size: inherit;
+                content: "\e907";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 100;
+                color:$black;
+                @include media('<desktop') {
+                    max-width: 90%;
+                }
+                @include media('<desktop') {
+                    font-size: 26px;
+                }
+            }
+            span {
+                display: none;
+            }
+            &:hover {
+                opacity: .8;
+            }
+            @include media('<desktop') {
+                margin-left: 0;
+                left: 55px;
+            }
+            @include media('<tablet') {
+                left: 2px;
+            }
+        }
+        .owl-next {
+            left: auto;
+            right: 19% !important;
+            @include media('<widescreen') {
+                left: auto !important;
+                right: 12% !important;
+            }
+            @include media('<desktop') {
+                left: auto !important;
+                right: 55px !important;
+            }
+            @include media('<tablet') {
+                left: auto !important;
+                right: 2px !important;
+            }
+            &:after {
+                font-family: 'icomoon';
+                font-size: inherit;
+                content: "\e906";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-weight: 100;
+                transform: translate(-50%, -50%);
+                @include media('<desktop') {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    .owl-nav {
+        margin: 0;
+    }
 }

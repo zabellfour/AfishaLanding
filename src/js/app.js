@@ -30,13 +30,25 @@
         var scroll = new SmoothScroll('[data-scroll]');
         
         $(".bottom-slider").owlCarousel({
- 
             items: 1,
-    
             nav:true,
             dots:true,
             loop: true,
             center: true,
+            autoHeight:true
+        });
+        let $common = $(".common-slider");
+            $common.on('initialized.owl.carousel', function(event){ 
+                setTimeout(function() {    $common.trigger('refresh.owl.carousel');  }, 500);
+            });
+        $common.owlCarousel({
+            items: 1,
+            nav:true,
+            dots:false,
+            loop: false,
+            center: true,
+            autoHeight:true,
+            mouseDrag: false
         });
         $(".events-slider").owlCarousel({
             margin: 130,
@@ -46,27 +58,26 @@
             dots:false,
             loop: true,
             center: true,
+            mouseDrag: false,
+            touchDrag: false,
             responsive: {
                 0: {
                     items: 1,
                     stagePadding: 40,
                     margin:10,
-                    mouseDrag: false,
-                    touchDrag: true
+                    
                 },
                 480: {
                     items: 1,
                     stagePadding: 100,
                     margin: 25,
-                    mouseDrag: false,
-                    touchDrag: true
+                  
                 },
                 768: {
                     items: 1,
                     stagePadding: 140,
                     margin: 30,
-                    mouseDrag: false,
-                    touchDrag: true
+                
                 },
                 1024: {
                     stagePadding: 240,
